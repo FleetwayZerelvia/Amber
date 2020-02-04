@@ -6,7 +6,7 @@ bot.on('ready', function() {
     console.log("Je suis connecté !")
 })
 
-bot.login('NDI0NjUzNDQ1OTc5NTcwMTc4.XimbFQ.LUluF-iuDrmhcbOGYE7BChh2ajA')
+bot.login('XXXXXXXX')
 
 bot.on('message', (receivedMessage) => {
     if (receivedMessage.author == bot.user) { // Prevent bot from responding to its own messages

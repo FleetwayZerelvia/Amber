@@ -42,11 +42,6 @@ function processCommand(receivedMessage) {
     } else {
         receivedMessage.channel.send("I don't understand the command. Try `!help` for the complete list of commands")
     }
-}
-
-function pingCommand(arguments, receivedMessage) {
-    receivedMessage.channel.send("Pong!")
-}
 
 function timeCommand(arguments, receivedMessage) {
     receivedMessage.channel.send()

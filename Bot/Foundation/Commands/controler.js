@@ -1,9 +1,9 @@
-const helpCommand = require('./help');
-const multiplyCommand = require('./multiply');
-const presCommand = require('./presentation');
-const pingCommand = require('./ping');
-const timeCommand = require('./time');
-const ytCommand = require('./youtube');
+const helpCommand = require('./GenHelp');
+const multiplyCommand = require('./Multiply');
+const presCommand = require('./Presentation');
+const pingCommand = require('./Ping');
+const timeCommand = require('./Time');
+const ytCommand = require('./YouTube');
 
 
 
@@ -16,7 +16,7 @@ module.exports = (receivedMessage) => {
     console.log("Command received: " + primaryCommand);
     console.log("Arguments: " + arguments); // There may not be any arguments
 
-    if (primaryCommand == "helpg") {
+    if (primaryCommand == "genhelp") {
         helpCommand(arguments, receivedMessage);
     } else if (primaryCommand == "multiply") {
         multiplyCommand(arguments, receivedMessage);
@@ -26,9 +26,9 @@ module.exports = (receivedMessage) => {
         pingCommand(arguments, receivedMessage);
     } else if (primaryCommand == "time") {
         timeCommand(arguments, receivedMessage);
-    } else if (primaryCommand == "youtube") {
+    } else if (primaryCommand == "youtube", "yt") {
         ytCommand(arguments, receivedMessage);
     } else {
-        receivedMessage.channel.send("I don't understand the command. Try `!helpg` for the general list of commands");
+        receivedMessage.channel.send("I don't understand that command. Try `!helpg` for the general list of commands");
     }
 }

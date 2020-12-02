@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const processCommand = require('./Commands/controler');
+const processCommand = require('./Commands/Controler');
 
 bot.on('ready', function() {
-    console.log("Je suis connecté !");
+    console.log("I am online and ready to help !");
 });
 
-bot.login('xxxxxxxx');
+bot.login('xxxxxx');
 
 bot.on('message', (receivedMessage) => {
     if (receivedMessage.author == bot.user) { // Prevent bot from responding to its own messages

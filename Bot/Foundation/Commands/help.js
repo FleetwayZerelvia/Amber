@@ -13,4 +13,4 @@ module.exports = (arguments, receivedMessage) => {
     }
 }
 
-channel.send(EmbedAmber)
+//channel.send(EmbedAmber)

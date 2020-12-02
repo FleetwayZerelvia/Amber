@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const processCommand = require('../Commands/controler');
+const processCommand = require('./Commands/controler');
 
 bot.on('ready', function() {
     console.log("Je suis connecté !");

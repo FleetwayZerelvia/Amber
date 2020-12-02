@@ -1,7 +1,3 @@
-module.exports = connexion.js;
-
-}
-
-function pingCommand(arguments, receivedMessage) {
+module.exports = (arguments, receivedMessage) => {
     receivedMessage.channel.send("Pong!")
 }

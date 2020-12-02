@@ -1,3 +1,3 @@
 module.exports = (arguments, receivedMessage) => {
-    receivedMessage.channel.send()
+    console.log('function not implemented !');
 }

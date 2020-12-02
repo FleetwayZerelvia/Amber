@@ -1,6 +1,4 @@
-module.exports = connexion.js;
-
-function multiplyCommand(arguments, receivedMessage) {
+module.exports = (arguments, receivedMessage) => {
     if (arguments.length < 2) {
         receivedMessage.channel.send("Not enough values to multiply. Try `!multiply 2 4 10` or `!multiply 5.2 7`")
         return

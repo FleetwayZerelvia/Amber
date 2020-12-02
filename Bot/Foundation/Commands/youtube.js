@@ -1,3 +1,3 @@
 module.exports = (arguments, receivedMessage) => {
-    console.log('function not implemented !');
+    receivedMessage.channel.send("This command is in development")
 }

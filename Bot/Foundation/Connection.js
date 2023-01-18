@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const processCommand = require('./Commands/Controler');
+const processCommand = require('./Index');
 
 bot.on('ready', function() {
     console.log("I am online and ready to help !");

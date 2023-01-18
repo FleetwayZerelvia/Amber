@@ -1,1 +1,3 @@
 **/node_modules
+**/Core/Connection.js
+**/Core/Config/Config.json

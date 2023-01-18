@@ -10,7 +10,7 @@ module.exports = (arguments, receivedMessage) => {
             .setDescription('You will find the public commands that i can offer for everyone')
             .setThumbnail('https://i.imgur.com/IJQSF1Q.jpg')
             .addFields({
-                name: '!helpg',
+                name: '!help',
                 value: 'This is the command you just used'
             }, {
                 name: '!ping',
@@ -21,4 +21,4 @@ module.exports = (arguments, receivedMessage) => {
 
         receivedMessage.channel.send(EmbedAmber);
     }
-}
+};

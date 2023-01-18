@@ -8,4 +8,4 @@ module.exports = (arguments, receivedMessage) => {
 
         m.edit(`**:ping_pong: Pong! Your Ping Is:-**\n  ${ping}ms`);
     });
-}
+};

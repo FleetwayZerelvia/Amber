@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 
 // inside a command, event listener, etc.
-const EmbedAmber = new Discord.MessageEmbed()
+const EmbedAmber = new EmbedBuilder()
 	.setColor('#0099ff')
 	.setTitle('Some title')
 	.setURL('https://discord.js.org/')

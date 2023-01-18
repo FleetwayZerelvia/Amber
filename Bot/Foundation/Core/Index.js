@@ -1,4 +1,5 @@
 const { Client, Collection, GatewayIntentBits, ActivityType } = require('discord.js');
+const config = require('./Config/Config.json');
 // const Keyv = require('keyv');
 
 const prefix = config.globalPrefix;

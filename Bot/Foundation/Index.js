@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, GatewayIntentBits, ActivityType } = require('discord.js');
+const { Client, Events, Collection, GatewayIntentBits, ActivityType } = require('discord.js');
 const { token, clientId } = require('./Core/Config/Config.json');
 
 // Set our intents here.
@@ -43,6 +43,25 @@ for (const file of eventFiles) {
 	}
 }
 
+//Executes the commands
+client.on(Events.InteractionCreate, async interaction => {
+	if (!interaction.isChatInputCommand()) return;
+
+	const command = interaction.client.commands.get(interaction.commandName);
+
+	if (!command) {
+		console.error(`No command matching ${interaction.commandName} was found.`);
+		return;
+	}
+
+	try {
+		await command.execute(interaction);
+	} catch (error) {
+		console.error(error);
+		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+	}
+});
+
 // Print Status
 client.on('ready', () => {
     date = new Date()
@@ -50,7 +69,7 @@ client.on('ready', () => {
     client.user.setPresence({
         status: "online",
         activities: [{
-            name: "With code",
+            name: "with code",
             type: ActivityType.Playing
         }]
     });

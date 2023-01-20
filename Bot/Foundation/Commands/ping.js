@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const { SlashCommandBuilder } = require('discord.js');
 
-module.exports = (arguments, receivedMessage) => {
-    receivedMessage.channel.send(`Pinging...`).then(m => {
-        var ping = m.createdTimestamp - receivedMessage.createdTimestamp;
-        var botPing = Math.round(bot.pi);
-
-        m.edit(`**:ping_pong: Pong! Your Ping Is:-**\n  ${ping}ms`);
-    });
+module.exports = {
+    data: new SlashCommandBuilder()
+        .setName('ping')
+        .setDescription('Pongs back with time in ms'),
+    async execute(interaction) {
+        await interaction.reply(`**:ping_pong: Pong! Your Ping Is:-**\n  ${ping}ms`);
+    },
 };
